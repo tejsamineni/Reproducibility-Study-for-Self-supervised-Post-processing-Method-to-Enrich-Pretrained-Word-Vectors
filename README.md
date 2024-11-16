@@ -44,3 +44,22 @@ We implemented and analyzed the methods described in the paper, including:
    ```bash
    git clone https://github.com/tejsamineni/Reproducibility-Study-for-Self-supervised-Post-processing-Method-to-Enrich-Pretrained-Word-Vectors.git
    cd Reproducibility-Study-for-Self-supervised-Post-processing-Method-to-Enrich-Pretrained-Word-Vectors
+
+   ### Perform Self-Extrofitting:
+2. Open and run the `selfextro_mv-2.ipynb` notebook.
+Ensure that:
+   - File paths are updated to match your local directory structure.
+   - Batch size is adjusted based on your system's GPU memory and computational capacity.
+This notebook performs:
+   - Semantic similarity extraction.
+   - Extrofitting pretrained embeddings.
+The enriched embeddings are saved to a file (e.g., `fastTextSelfExtro_threshold95_dim300.txt`).
+
+### Evaluate Enriched Embeddings:
+3. Open and run the `Text_Classification_mv.ipynb` notebook.
+ Ensure that:
+   - The file path for the enriched embeddings generated in the previous step is correctly updated.
+   - The batch size is appropriate for your system's GPU capabilities.
+This notebook performs:
+   - Text classification on the AGNews dataset.
+   - Validation and test accuracy reporting.
